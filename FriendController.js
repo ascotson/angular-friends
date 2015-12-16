@@ -1,7 +1,7 @@
 angular.module('angularFriends').controller('friendController', function($scope) {
 
   $scope.sort = 'name';
-  $scope.order = true;
+  $scope.order = '+';
 
   $scope.friends = [
     {

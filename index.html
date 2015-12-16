@@ -29,22 +29,22 @@ set to 'true' -->
 
         <select class="input-medium" ng-model="sort">
           <option value="name">Name</option>
-          <option value="friend-count">#Friends</option>
+          <option value="friend_count">#Friends</option>
           <option value="current_location.city">City</option>
           <option value="current_location.state">State</option>
           <option value="current_location.country">Country</option>
         </select>
 
         <select class="input-medium" ng-model="order">
-          <option value="+">Descending</option>
-          <option value="-">Ascending</option>
+          <option value="-">Descending</option>
+          <option value="+">Ascending</option>
         </select>
 
       </div>
     </form>
 
     <ul>
-      <li class='friend' ng-repeat="friend in friends | filter: searchTerm | orderBy: sort">
+      <li class='friend' ng-repeat="friend in friends | filter: searchTerm | orderBy: order + sort">
 
         <img class="profile-pic" src={{friend.pic_square}}>
 
